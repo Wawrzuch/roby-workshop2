@@ -1,0 +1,100 @@
+:root {
+  --height: 40px;
+  --button-radius: 5px;
+
+  --accent: #3f51b5;
+  --main: white;
+  --text: #333;
+}
+
+.button {
+  background-color:#000000;
+  text-decoration:none;
+  padding:0 20px;
+  border-radius:5px;
+  color:#898989;
+  height: var(--height);
+  line-height: var(--height);
+  display:inline-block;
+  text-transformation:uppercase;
+  letter-spacing:1px;
+  transition: background-color .3s ease-in-out;
+}
+
+.button:hover {
+  background-color:#888888;
+}
+
+.button:active {
+  transform: translateY(2px);
+}
+
+.button:visited {
+ color:#898989; 
+}
+
+.button--secondary {
+  height: calc(40px/2);
+  line-height: calc(40px/2);
+}
+
+.heading {
+  /* wpisz odpowiednie style */
+}
+
+.panel {
+  width: fit-content;
+  background-color: #999999;
+  padding: 1em;
+  border-radius: 5px;
+  margin-top: 20px;
+}
+
+.panel + .panel {
+  margin-top:20px;
+}
+
+.panel__list {
+  list-style: none;
+  padding: 0px;
+  display: flex;
+  flex-direction:column;
+}
+
+
+.panel__item + .panel__item {
+  margin-top:20px;
+}
+
+.panel__title {
+  margin:0px;
+}
+
+.panel__text {
+  margin:5px 0 0 0;
+}
+
+.panel__actions {
+  /* wpisz odpowiednie style */
+}
+
+.panel__action + .panel__action {
+  /* wpisz odpowiednie style */
+}
+
+@media (min-width: 820px) {
+  .panel__list,
+  .panel__actions {
+     flex-direction:row;
+  }
+
+  .panel__item + .panel__item {
+   margin-left:30px;
+   margin-top:0;
+  }
+
+  .panel__action + .panel__action {
+   /* wpisz odpowiednie style */
+  }
+}
+
